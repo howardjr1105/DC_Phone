@@ -1,0 +1,347 @@
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0 2em;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a span{
+   font-weight: 900;
+   font-size: large;
+}
+.barraSuperior{
+  display: flex;
+  justify-content:space-between;
+  background-color:darkblue;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.barraSuperior .logo{
+  flex-basis: 10%;
+}
+.barraSuperior .logo img{
+  width: 5rem;
+  border-radius: 100%;
+  padding: 0.3rem;
+}
+.barraSuperior .accesos{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-basis: 23%;
+}
+.barraSuperior .accesos a{
+  text-decoration: none;
+  color: white;
+}
+.barraSuperior .botonera{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-basis: 12%;
+}
+.barraSuperior .botonera img{
+  width: 4rem;
+}
+.ArtSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color:aliceblue;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+.margen{
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+}
+.columnA{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.Art{
+  display: flex;
+  justify-content:space-evenly;
+}
+.columnA .Art .Link-Tendencias{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc(100/3);
+}
+.Link-Tendencias img{
+  width: 15rem;
+  border-radius: 1rem;
+}
+.Link-Tendencias p{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  padding: 0 1rem 0 0;
+}
+.Varios{
+  display: flex;
+  justify-content: space-between;
+}
+.detalle{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0.2rem;
+}
+.Art-Det{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.Art-Det img{
+  width: 8rem;
+  border-radius: 0.5rem;
+}
+.Marcas{
+  display: flex;
+  justify-content:space-around;
+}
+.Marcas img{
+  width: 8rem;
+}
+footer{
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+footer img{
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+}
+footer a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+footer h4{
+  color: white;
+}
+.Contacto{
+  display: flex;
+  justify-content:center;
+}
+.Redes{
+  display: flex;
+  justify-content:center;
+}
+.ArtSection h2{
+  position: relative;
+}
+.ArtSection h2::before{
+  content: '';
+  background-color:darkblue;
+  width: 5rem;
+  height: 0.5rem;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  border-radius: 1em;
+  opacity: 0.5;
+}
+.ArtSection h2::after{
+  content: '';
+  background-color:darkblue;
+  width: 5rem;
+  height: 0.5rem;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  border-radius: 1em;
+  opacity: 0.5;
+}
+.Marcas #logoRealme{
+  padding-top: 3em;
+}
+.contenedor{
+  text-align: center;
+  justify-content: center;
+}
+.contenido-nosotros{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background-color: aliceblue;
+  text-align: center;
+  align-items: center;
+}
+.Text-Nosotros{
+  padding: 2rem;
+}
+.logo-nosotros img{
+  border-radius: 50%;
+}
+.Text-Nosotros blockquote{
+  font-weight: 900;
+  font-size:x-large;
+}
+#eslogan{
+  width: 18rem;
+}
+.Tienda img{
+  width: 30rem;
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 5rem;
+}
+.camera{
+  display: flex;
+  justify-content: center;
+}
+.camera img{
+  width: 2rem;
+  height: 2rem;
+}
+.PresTel{
+  background-image: url(https://i02.appmifile.com/6_operator_sg/22/03/2022/9c1d1e1da070a64d475fac98aea5628d.jpg);
+  height: 30rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.TextPres{
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 60rem;
+}
+.TextPres p{
+  width: 20rem;
+}
+.detalleProduct{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 3rem;
+}
+.detalleProduct div{
+  display: flex;
+}
+.titulo{
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+}
+.tituloDet{
+  flex-basis: 60%;
+  display: flex;
+}
+.colorTelefono{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.colorTelefono img{
+  border-radius: 1rem;
+}
+.PresTel{
+  background-image: url(https://i02.appmifile.com/6_operator_sg/22/03/2022/9c1d1e1da070a64d475fac98aea5628d.jpg);
+  height: 30rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.PresAudifono{
+  background-image: url(https://i.ibb.co/Ry95gZW/PCD-Lifestyle-KV-PC.webp);
+  height: 30rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.TextAudifono{
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 0 20rem;
+}
+.TextAudifono p{
+  width: 15rem;
+}
+.PresSmartW{
+  background-image: url(https://i.ibb.co/B4BGVm8/Lr3pro.jpg);
+  height:25rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.TextSmartW{
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 0 8rem;
+}
+.credenciales{
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  height: 30rem;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  text-align: center;
+}
+.formulario .credencial{
+  height: 2rem;
+  width: 19rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+.check{
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.check input{
+  margin-right: 0.5rem;
+}
+.botones{
+  display: flex;
+  justify-content: space-around;
+}
+.botones .botCre{
+  margin: 0 0.5rem;
+  background-color: darkblue;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  height: 4rem;
+  width: 10rem;
+  text-align: center;
+}
+.botones .botCre h4{
+  color: whitesmoke;
+}
+#mapa{
+  height: 20rem;
+}
+.PresSilicon{
+  background-image: url(https://i.ibb.co/51tv60m/iphone-cases-magsafe-banner-202203-GEO-MX.jpg);
+  height:25rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.TextSilicon{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 0 8rem;
+}
