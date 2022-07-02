@@ -198,11 +198,13 @@ footer h4{
 }
 .camera{
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  padding: 1rem;
 }
 .camera img{
   width: 2rem;
   height: 2rem;
+  padding: 0;
 }
 .PresTel{
   background-image: url(https://i02.appmifile.com/6_operator_sg/22/03/2022/9c1d1e1da070a64d475fac98aea5628d.jpg);
@@ -357,16 +359,15 @@ footer h4{
 }
 .PresSilicon{
   background-image: url(https://i.ibb.co/51tv60m/iphone-cases-magsafe-banner-202203-GEO-MX.jpg);
-  height:25rem;
+  height:28rem;
+  width: 90rem;
   border-radius: 1rem;
   margin: 1rem 0;
+  display: flex;
+  align-items: center;
 }
 .TextSilicon{
   color: black;
   display: flex;
   flex-direction: column;
-  height: 25rem;
-  justify-content: center;
-  align-items:flex-start;
-  padding: 0 8rem;
 }
