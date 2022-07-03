@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="CSS/normalize.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
     <link rel="stylesheet" href="CSS/Package/index.css" type="text/css">
     <link rel="stylesheet" href="CSS/selectores.css" type="text/css">
 
@@ -24,31 +26,44 @@
                 </a>
             </div>
             <div class="accesos">
-                <a href="variedadDispositivos.html"><h3>Telefonos</h3></a>
-                <a href="accesorios.html"><h3>Accesorios</h3></a>
-                <a href="nosotros.html"><h3>Nosotros</h3></a>
+                <a href="variedadDispositivos.html">
+                    <h3>Telefonos</h3>
+                </a>
+                <a href="accesorios.html">
+                    <h3>Accesorios</h3>
+                </a>
+                <a href="nosotros.html">
+                    <h3>Nosotros</h3>
+                </a>
             </div>
-            
+
             <div class="botonera">
-                
+
                 <a href="usuario.html">
                     <img id="usuario" src="https://i.ibb.co/sJL3d36/user.png">
                 </a>
-            </a>
-            <a href="#carrito">
-                <img src="https://i.ibb.co/rsh1x18/cart.png" alt="carrito">
-            </a>
+                </a>
+                <a href="#carrito">
+                    <img src="https://i.ibb.co/rsh1x18/cart.png" alt="carrito">
+                </a>
             </div>
         </section>
     </header>
     <section class="carrito" id="carrito">
-        <div class="ContCar" id="ContCar">
-            
-            
-        </div>
         <div class="ContCar">
-            <button id="Vaciar">Vaciar Carrito</button>
-            <a href="#header">Salir</a>
+            <div class="headC">
+                <h3>Carrito De Compras</h3>
+                <a href="#header">
+                    <img src="https://i.ibb.co/59XPSgF/icons8-Close-480px.png" alt="Salir">
+                </a>
+            </div>
+            <div class="CarCont" id="ContCar">
+            </div>
+            <div class="CarCont">
+                <button id="Vaciar">Vaciar Carrito</button>
+                <p id="Total"></p>
+                <a href="#header">Salir</a>
+            </div>
         </div>
     </section>
     <main>
@@ -155,7 +170,9 @@
             <h4>Copyright © DC Phone Todos los derechos reservados.</h4>
         </div>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
     <script src="JS/mapa.js"></script>
     <script src="JS/main.js"></script>
 </body>

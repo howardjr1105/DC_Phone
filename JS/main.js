@@ -6,6 +6,7 @@ let stockProductos = [
 ]
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let total = document.getElementById('Total');
 
 const contenedorTel = document.getElementById('contenedorTel')
 const contenedorCover = document.getElementById('contenedorCover')
@@ -13,6 +14,7 @@ const contenedorAud = document.getElementById('contenedorAud')
 const contenedorSmart = document.getElementById('contenedorSmart')
 const contenedorCarrito = document.getElementById('ContCar')
 const botonVaciar = document.getElementById('Vaciar')
+
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
@@ -29,7 +31,7 @@ stockProductos.forEach((producto) => {
         <img src="${producto.img}" alt="">
         <h3>${producto.nombre}</h3>
         <p>Precio: $ ${producto.precio}</p>
-        <button id="agregar${producto.id}">Agregar</button>
+        <button id="agregar${producto.id}"><img src="https://i.ibb.co/wC43T4H/icons8-add-shopping-cart-480px.png" alt="Add Shopping cart"></button>
         `
         if(contenedorTel != null){
         contenedorTel.appendChild(div)
@@ -51,7 +53,7 @@ stockProductos.forEach((producto) => {
         <img src="${producto.img}" alt="">
         <h3>${producto.nombre}</h3>
         <p>Precio: $ ${producto.precio}</p>
-        <button id="agregar${producto.id}">Agregar</button>
+        <button id="agregar${producto.id}"><img src="https://i.ibb.co/wC43T4H/icons8-add-shopping-cart-480px.png" alt="Add Shopping cart"></button>
         `
         if(contenedorAud != null){
         contenedorAud.appendChild(div)
@@ -73,7 +75,7 @@ stockProductos.forEach((producto) => {
         <img src="${producto.img}" alt="">
         <h3>${producto.nombre}</h3>
         <p>Precio: $ ${producto.precio}</p>
-        <button id="agregar${producto.id}">Agregar</button>
+        <button id="agregar${producto.id}"><img src="https://i.ibb.co/wC43T4H/icons8-add-shopping-cart-480px.png" alt="Add Shopping cart"></button>
         `
         if(contenedorCover != null){
         contenedorCover.appendChild(div)
@@ -95,7 +97,7 @@ stockProductos.forEach((producto) => {
         <img src="${producto.img}" alt="">
         <h3>${producto.nombre}</h3>
         <p>Precio: $ ${producto.precio}</p>
-        <button id="agregar${producto.id}">Agregar</button>
+        <button id="agregar${producto.id}"><img src="https://i.ibb.co/wC43T4H/icons8-add-shopping-cart-480px.png" alt="Add Shopping cart"></button>
         `
         if(contenedorSmart != null){
         contenedorSmart.appendChild(div)
@@ -110,6 +112,27 @@ stockProductos.forEach((producto) => {
     }
    }
 })
+
+const disminuir = (prodId) => {
+    let contador = 0
+    const item = stockProductos.find((prod) => prod.id === prodId)
+    for (let index = 0; index < carrito.length; index++) {
+        if (carrito[index].id === item.id) {
+            carrito[index].cantidad = carrito[index].cantidad - 1;
+            contador = contador - 1
+            stockProductos.forEach((producto) => {
+                if (prodId === producto.id) {
+                    carrito[index].precio = producto.precio * carrito[index].cantidad
+                }
+            });
+        }
+        if (carrito[index].cantidad==0) {
+            eliminarDelCarrito(carrito[index].id)
+        }
+    }
+    
+    actualizarCarrito()
+}
 
 const agregarAlCarrito = (prodId) => {
     let contador = 0
@@ -132,6 +155,8 @@ const agregarAlCarrito = (prodId) => {
     actualizarCarrito()
 }
 
+
+
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf(item)
@@ -140,19 +165,29 @@ const eliminarDelCarrito = (prodId) => {
 }
 function actualizarCarrito(){
     contenedorCarrito.innerHTML = ""
-
+    let pagar = 0
     carrito.forEach((prod) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
-        <p>${prod.nombre}</p>
+        <img src="${prod.img}" alt="">
+        <h5>${prod.nombre}</h5>
         <p>Precio: $ ${prod.precio}</p>
-        <p>Cantidad: ${prod.cantidad}</p>
-        <button onclick="eliminarDelCarrito(${prod.id})">Eliminar</button>
+        <div class="CantidadProd">
+            <button onclick="disminuir(${prod.id})">
+                <img src="https://i.ibb.co/cxNb5k7/icons8-minus-480px-1.png" alt="Minus">
+            </button>
+            <input type="text" value="${prod.cantidad}">
+            <button onclick="agregarAlCarrito(${prod.id})">
+                <img src="https://i.ibb.co/F6XDLR6/icons8-Plus-480px-3.png" alt="Plus">
+            </button>
+        </div>
+        <button onclick="eliminarDelCarrito(${prod.id})"><img src="https://i.ibb.co/tD8Fsz0/icons8-trash-480px.png" alt="eliminar"></button>
         `
         contenedorCarrito.appendChild(div)
-        
+        pagar = prod.precio + pagar
     })
+    total.textContent = "Total: $" + pagar
     localStorage.removeItem('carrito')
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
