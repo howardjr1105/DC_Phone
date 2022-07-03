@@ -2,10 +2,10 @@ let stockProductos = [
     { id: 1, nombre: "Redmi Note 11S", cantidad: 1, precio: 210, img: 'https://i.ibb.co/2MyvY8k/redmi-note-11s-5g.png' }
 ]
 
-let carrito = []
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const contenedorProductos = document.getElementById('contenedorProd')
-const contenedorCarrito = document.getElementById('contenedorCarrito')
+const contenedorCarrito = document.getElementById('ContCar')
 
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
@@ -54,4 +54,6 @@ const actualizarCarrito = () => {
         contenedorCarrito.appendChild(div)
         
     })
+    localStorage.setItem('carrito', JSON.stringify(a));
 }
+

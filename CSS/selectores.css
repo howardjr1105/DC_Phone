@@ -376,3 +376,33 @@ footer h4{
   height: 5rem;
   padding: 0;
 }
+.carrito{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  --opacity: 0;
+  --pointer: none;
+   opacity: var(--opacity);
+   pointer-events: var(--pointer);
+   transition: opacity .5s;
+}
+.carrito:target{
+  --opacity: 1;
+  --pointer: unset;
+}
+.ContCar{
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
