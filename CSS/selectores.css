@@ -41,6 +41,10 @@ a span{
   align-items: center;
   flex-basis: 12%;
 }
+.botonera button{
+  background: none;
+  border: none;
+}
 .barraSuperior .botonera img{
   width: 4rem;
 }
@@ -239,7 +243,7 @@ footer h4{
   background-image: url(https://i.ibb.co/BB1VPpq/latin-feature-choose-the-sound-you-want-to-hear-481739907.webp);
   background-repeat: no-repeat;
   height: 30rem;
-  width: 90rem;
+  width: 75rem;
   border-radius: 1rem;
   margin: 1rem 0;
   display: flex;
@@ -314,16 +318,19 @@ footer h4{
   display: flex;
   justify-content: space-around;
 }
-.botones .botCre{
+.botones .botCre, .botCre{
   display: flex;
   margin:0 0.5rem;
   background-color: darkblue;
+  border: none;
   border-radius: 1rem;
   padding: 0 0.5rem;
   height: 4rem;
   width: 10rem;
   align-items: center;
   justify-content: center;
+  color: whitesmoke;
+  font-size: x-large;
 }
 .botones .botCre h4{
   color: whitesmoke;
@@ -362,8 +369,7 @@ footer h4{
   padding: 0;
 }
 .producto button{
-  width: 20%;
-  height: 10%;
+  width: 25%;
   border: none;
   border-radius: 1rem;
   background-color: darkblue;
@@ -412,7 +418,7 @@ footer h4{
   border-radius: 1rem;
 }
 .ContCar h3{
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .CarCont{
   display: flex;
@@ -422,7 +428,7 @@ footer h4{
   margin: 1rem;
 }
 .CarCont button, .CarCont a, .headC a{
-  margin: 1rem 1rem;
+  margin: 0.5rem 0.5rem;
   border: none;
   text-decoration: none;
   background-color: #00008b;
@@ -435,8 +441,7 @@ footer h4{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
   background-color: whitesmoke;
   border-radius: 1rem;
 }
@@ -457,4 +462,29 @@ footer h4{
 .CantidadProd input{
   width: 1.5rem;
   border: none;
+}
+.sitioAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prodAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.prodAdmin input{
+  width: 25rem;
+  height: 1.5rem;
+}
+.prodAdmin button{
+  margin: 1rem;
+}
+.informacion{
+  display: flex;
+  justify-content: space-between;
+}
+.informacion img{
+  width: 8rem;
+  border-radius: 10rem;
 }

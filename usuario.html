@@ -28,21 +28,18 @@
                 <a href="nosotros.html"><h3>Nosotros</h3></a>
             </div>
             <div class="botonera">
-                
-                <a href="">
+                <a>
                     <img id="usuario" src="https://i.ibb.co/sJL3d36/user.png">
                 </a>
-                <a href="">
-                    <img src="https://i.ibb.co/rsh1x18/cart.png" alt="carrito">
-                </a>
+
             </div>
         </section>
     </header>
     <main>
         <section class="credenciales margen">
-            <div class="formulario">
+            <form class="formulario" name="form" id="form" action="INICIO DE SESION">
                 <h3>Inicia sesión</h3>
-                <input type="text" name="" id="" placeholder="Correo Electronico" class="credencial" required>
+                <input type="text" name="correo" id="correoIniciar" placeholder="Correo Electronico" class="credencial" required>
                 <input type="password" name="" id="" placeholder="Contraseña" class="credencial" required>
                 <div class="check">
                     <input type="checkbox" name="" id="">
@@ -52,11 +49,9 @@
                     <a href="registrarse.html" class="botCre">
                         <h4>Registrarse</h4>
                     </a>
-                    <a href="index.html" class="botCre">
-                        <h4>Iniciar Sesión</h4>
-                    </a>
+                    <button class="botCre" id="Iniciar">Iniciar Sesión</button>
                 </div>
-            </div>
+            </form>
         </section>
         
     </main>
@@ -86,6 +81,7 @@
             <h4>Copyright © DC Phone Todos los derechos reservados.</h4>
         </div>
     </footer>
+    <script src="JS/iniciar.js"></script>
 </body>
 
 </html>

@@ -22,44 +22,34 @@
                     <img src="https://i.ibb.co/chW22s4/DCPhone.png" alt="Logotipo DC Phone">
                 </a>
             </div>
-            <div class="accesos">
-                <a href="variedadDispositivos.html">
-                    <h3>Telefonos</h3>
-                </a>
-                <a href="accesorios.html">
-                    <h3>Accesorios</h3>
-                </a>
-                <a href="nosotros.html">
-                    <h3>Nosotros</h3>
-                </a>
-            </div>
-
+            
             <div class="botonera">
-
-                <a href="usuario.html">
+                
+                <a>
                     <img id="usuario" src="https://i.ibb.co/sJL3d36/user.png">
                 </a>
             </div>
         </section>
     </header>
     <main>
-        <section class="credenciales margen">
-            <form class="formulario" action="INICIO DE SESION" id="form" name="form">
-                <h3>Crea tu cuenta DC</h3>
-                <input type="text" name="correo" id="" placeholder="Correo Electronico" class="credencial" required>
-                <input type="password" name="" id="" placeholder="Contraseña" class="credencial" required>
-                <input type="text" name="" id="" placeholder="Nombres" class="credencial" required>
-                <input type="text" name="" id="" placeholder="Apellidos" class="credencial" required>
-                <input type="date" name="" id="" class="credencial" required>
-                <input type="text" name="" id="" placeholder="Numero de Telefono" class="credencial" required>
-                <div class="check">
-                    <input type="checkbox" name="" id="" required>
-                    <p>Acepto los Terminos y Condiciones</p>
+        <section class="sitioAdmin">
+            <h2>Administración del sitio</h2>
+            <div class="opciones">
+                <h4>Productos</h4>
+                <div id="contenedorProd" class="CarCont">
+
                 </div>
-                <div class="botones">
-                    <button class="botCre" id="crear">Registrarse</button>
-                </div>
-            </form>
+                <h4>Agregar Producto</h4>
+                <form action="INICIO DE SESION" name="form" class="prodAdmin">
+                    <h5>Nombre del Producto</h5>
+                    <input type="text" name="Nombre" id="" required>
+                    <h5>Precio del Producto</h5>
+                    <input type="text" name="Precio" id="" required>
+                    <h5>Imagen del Producto (URL)</h5>
+                    <input type="text" accept="image/*" name="image" required>
+                    <button id="agregar" class="botCre">Agregar</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
@@ -88,7 +78,7 @@
             <h4>Copyright © DC Phone Todos los derechos reservados.</h4>
         </div>
     </footer>
-    <script src="js/crear.js"></script>
+    <script src="JS/adminProd.js"></script>
 </body>
 
 </html>
