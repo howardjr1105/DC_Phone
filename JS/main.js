@@ -136,14 +136,12 @@ stockProductos.forEach((producto) => {
 })
 
 const disminuir = (prodId) => {
-    let contador = 0
     const item = stockProductos.find((prod) => prod.id === prodId)
     for (let index = 0; index < carrito.length; index++) {
         if (carrito[index].id === item.id) {
             carrito[index].cantidad = carrito[index].cantidad - 1;
-            contador = contador - 1
             stockProductos.forEach((producto) => {
-                if (prodId === producto.id) {
+                if (carrito[index].id === producto.id) {
                     carrito[index].precio = producto.precio * carrito[index].cantidad
                 }
             });
@@ -167,6 +165,7 @@ const agregarAlCarrito = (prodId) => {
         }
     }
     if (contador === 0) {
+        window.alert("Articulo Agregado")
         carrito.push(item)
     }
 
